@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+        >
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"
+            integrity="sha384-wni+90X3k6RzeoBe7KKnt9FFEvs8VZy78BUWO4WVIbJCS8osimiyLLtWgV977q0b"
+            crossorigin="anonymous"
+        >
+        </script>
+        <script src="./src/password_sheet.js"></script>
+        <script>
+            var passwordSheet = new PasswordSheet();
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Simply Passwords</h1>
+                <p>
+                    No more:
+                    <ul>
+                        <li>"It's the same password I use everywhere."</li>
+                        <li>"I can't remember, maybe bunny5."</li>
+                        <li>"I don't remember which email I used, try ..."</li>
+                        <li>"I wrote it down somewhere,..."</li>
+                    </ul>
+                </p>
+                <p>
+                    Just click the button, print the sheet and fill out one of
+                    the rows when you sign up for a new service (or change the
+                    password for an existing account). The generated sheet contains
+                    randomly generated passwords.
+                </p>
+                <p>
+                    <a
+                        class="btn btn-primary btn-lg"
+                        href="javascript:void(0);"
+                        role="button"
+                        onClick="passwordSheet.generate()"
+                    >
+                        Generate Password Sheet
+                    </a>
+                </p>
+                <div>
+                    <small>
+                        This is just a middle ground solution.
+                        Please use additional/other means (password managers, 2-factor auth, ...), if you know how to.
+                    </small>
+                </div>
+                <div>
+                    <small>
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/mark-github.svg" />
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/cryptobias/simply-passwords">cryptobias/simply-passwords</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
