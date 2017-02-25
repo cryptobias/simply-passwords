@@ -40,6 +40,14 @@ class PasswordSheet {
             this._row(doc, i, '', '', this._generatePassword(this.passwordLength));
         }
 
+        doc.setFontSize(10);
+        doc.setFont('sans-serif', 'normal');
+        doc.text(
+            'Used all passwords? Go to https://cryptobias.github.io/simply-passwords and generate a new sheet.',
+            this.columnStart,
+            this.rowStart + this.maxRows * this.lineHeight + this.lineSpacing
+        );
+
         doc.output('dataurlnewwindow');
     }
 
